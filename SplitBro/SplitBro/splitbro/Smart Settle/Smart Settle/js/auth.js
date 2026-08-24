@@ -1,6 +1,7 @@
 let signupForm = document.getElementById("signupForm");
 let loginForm = document.getElementById("loginForm");
 
+
 let generateUserId = (name) => {
     let cleanName = name.trim().replace(/\s+/g, "").toUpperCase();
     let base = cleanName.substring(0, 6);
@@ -15,6 +16,8 @@ let generateUserId = (name) => {
 
     return userId;
 };
+
+
 
 if (signupForm) {
     signupForm.addEventListener("submit", (event) => {
