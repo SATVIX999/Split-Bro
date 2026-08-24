@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Bro | Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+    <div class="background-glow glow-three"></div>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </span>
+                Split <strong>Bro</strong>
+            </a>
+
+            <a href="signup.html" class="nav-button">
+                Create Account
+            </a>
+        </nav>
+    </header>
+
+    <main class="auth-page">
+
+        <div class="auth-container login-container">
+
+            <div class="auth-left">
+
+                <span class="hero-badge">
+                    <span></span>
+                    WELCOME BACK
+                </span>
+
+                <h1>
+                    Welcome<br>
+                    <span>Back.</span>
+                </h1>
+
+                <p>
+                    Login to your Split Bro account and see exactly
+                    how much you need to pay or receive.
+                </p>
+
+                <div class="login-highlight">
+
+                    <div class="login-highlight-icon">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+
+                    <div>
+                        <strong>Your money. Simplified.</strong>
+                        <p>
+                            Track expenses and settle group balances
+                            without the confusion.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="auth-card">
+
+                <div class="auth-card-header">
+                    <div class="auth-card-icon">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                    </div>
+
+                    <h2>Login</h2>
+
+                    <p>
+                        Login using your User ID or email.
+                    </p>
+                </div>
+
+                <form id="loginForm">
+
+                    <div class="auth-field">
+                        <label for="loginId">User ID or Email</label>
+
+                        <div class="auth-input">
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="loginId"
+                                placeholder="Enter User ID or email"
+                                required
+                            >
+                        </div>
+
+                        <span id="loginIdError" class="auth-error"></span>
+                    </div>
+
+                    <div class="auth-field">
+                        <label for="loginPassword">Password</label>
+
+                        <div class="auth-input">
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                            <button type="button" class="password-toggle" onclick="togglePassword('loginPassword', this)">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+
+                        <span id="loginPasswordError" class="auth-error"></span>
+                    </div>
+
+                    <div id="loginMessage" class="auth-message"></div>
+
+                    <button type="submit" class="auth-submit">
+                        Login
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+                <div class="auth-divider">
+                    <span>Don't have an account?</span>
+                </div>
+
+                <a href="signup.html" class="auth-switch">
+                    Create a new account
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,490 @@
+.insights-page {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 60px 0 80px;
+}
+
+.insights-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.insights-heading h1 {
+    margin: 8px 0;
+    font-size: 42px;
+}
+
+.insights-heading p {
+    margin: 0;
+    color: #a89f8c;
+}
+
+.insights-heading-icon {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 22px;
+    background: rgba(201, 147, 46, 0.12);
+    border: 1px solid rgba(201, 147, 46, 0.2);
+    font-size: 30px;
+}
+
+.insights-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.insight-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 24px;
+    border-radius: 18px;
+    background: rgba(30, 26, 20, 0.7);
+    border: 1px solid rgba(168, 159, 140, 0.12);
+}
+
+.insight-stat-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: rgba(201, 147, 46, 0.12);
+    font-size: 20px;
+}
+
+.insight-stat-card span {
+    display: block;
+    font-size: 13px;
+    color: #a89f8c;
+    margin-bottom: 5px;
+}
+
+.insight-stat-card strong {
+    font-size: 20px;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.category-card,
+.chart-card,
+.top-expenses-card {
+    padding: 28px;
+}
+
+.insights-panel-header {
+    margin-bottom: 25px;
+}
+
+.insights-panel-header h2 {
+    margin: 6px 0;
+    font-size: 23px;
+}
+
+.insights-panel-header p {
+    margin: 0;
+    color: #a89f8c;
+    font-size: 14px;
+}
+
+.category-item {
+    margin-bottom: 22px;
+}
+
+.category-item:last-child {
+    margin-bottom: 0;
+}
+
+.category-item-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 9px;
+}
+
+.category-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.category-name i {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: rgba(201, 147, 46, 0.12);
+}
+
+.category-amount {
+    font-weight: 600;
+}
+
+.category-bar {
+    width: 100%;
+    height: 9px;
+    border-radius: 20px;
+    background: rgba(168, 159, 140, 0.12);
+    overflow: hidden;
+}
+
+.category-bar-fill {
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(
+        90deg,
+        #c9932e,
+        #e0a53a
+    );
+}
+
+.category-percentage {
+    display: block;
+    margin-top: 6px;
+    color: #8a8171;
+    font-size: 12px;
+}
+
+.category-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    min-height: 260px;
+}
+
+.chart-row {
+    display: grid;
+    grid-template-columns: 90px 1fr 70px;
+    align-items: center;
+    gap: 12px;
+}
+
+.chart-label {
+    font-size: 13px;
+}
+
+.chart-track {
+    height: 16px;
+    border-radius: 20px;
+    background: rgba(168, 159, 140, 0.1);
+    overflow: hidden;
+}
+
+.chart-fill {
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(
+        90deg,
+        #e0a53a,
+        #c9932e
+    );
+}
+
+.chart-value {
+    text-align: right;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.top-expenses {
+    display: grid;
+    gap: 12px;
+}
+
+.top-expense-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 14px;
+    background: rgba(30, 26, 20, 0.45);
+    border: 1px solid rgba(168, 159, 140, 0.08);
+}
+
+.top-expense-info {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.top-expense-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: rgba(201, 147, 46, 0.12);
+}
+
+.top-expense-info strong {
+    display: block;
+}
+
+.top-expense-info small {
+    display: block;
+    margin-top: 3px;
+    color: #a89f8c;
+}
+
+.top-expense-amount {
+    font-weight: 700;
+}
+
+.insights-empty {
+    display: none;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.insights-empty-icon {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    border-radius: 20px;
+    background: rgba(201, 147, 46, 0.12);
+    font-size: 30px;
+}
+
+.insights-empty h2 {
+    margin-bottom: 8px;
+}
+
+.insights-empty p {
+    color: #a89f8c;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 900px) {
+
+    .insights-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .insights-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .insights-page {
+        padding-top: 35px;
+    }
+
+    .insights-heading {
+        align-items: flex-start;
+    }
+
+    .insights-heading h1 {
+        font-size: 32px;
+    }
+
+    .insights-heading-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+
+    .insights-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-row {
+        grid-template-columns: 75px 1fr 60px;
+    }
+
+}
+.fairness-card {
+    margin-top: 30px;
+    padding: 32px;
+}
+
+.fairness-card .insights-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.fairness-score-box {
+    min-width: 150px;
+    padding: 18px 22px;
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    border-radius: 16px;
+    background: rgba(35, 28, 19, 0.7);
+    text-align: center;
+}
+
+.fairness-score-box span {
+    display: block;
+    font-size: 12px;
+    color: #a89f8c;
+    margin-bottom: 6px;
+}
+
+.fairness-score-box strong {
+    display: block;
+    font-size: 28px;
+    color: #2dd4bf;
+}
+
+.fairness-message {
+    margin-top: 24px;
+    padding: 18px 20px;
+    border-radius: 14px;
+    background: rgba(40, 31, 22, 0.7);
+    border: 1px solid rgba(245, 241, 232, 0.06);
+}
+
+.fairness-message strong {
+    display: block;
+    font-size: 18px;
+    color: #f5f1e8;
+    margin-bottom: 6px;
+}
+
+.fairness-message span {
+    display: block;
+    color: #948a76;
+    font-size: 14px;
+}
+
+.fairness-members {
+    margin-top: 22px;
+}
+
+.fairness-member {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(245, 241, 232, 0.06);
+}
+
+.fairness-member:last-child {
+    border-bottom: none;
+}
+
+.fairness-member-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 220px;
+}
+
+.fairness-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #281f16;
+    color: #2dd4bf;
+    font-weight: 700;
+}
+
+.fairness-member-info strong {
+    display: block;
+    color: #f5f1e8;
+    font-size: 15px;
+}
+
+.fairness-member-info small {
+    display: block;
+    margin-top: 4px;
+    color: #948a76;
+    font-size: 12px;
+}
+
+.fairness-member-values {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.fairness-member-values > div {
+    min-width: 100px;
+}
+
+.fairness-member-values span {
+    display: block;
+    color: #948a76;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+
+.fairness-member-values strong {
+    color: #f5f1e8;
+    font-size: 14px;
+}
+
+.fairness-positive strong {
+    color: #7fb356 !important;
+}
+
+.fairness-negative strong {
+    color: #d9573f !important;
+}
+
+.fairness-balanced strong {
+    color: #7fb356 !important;
+}
+
+@media (max-width: 900px) {
+
+    .fairness-card .insights-panel-header {
+        flex-direction: column;
+    }
+
+    .fairness-score-box {
+        width: 100%;
+    }
+
+    .fairness-member {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .fairness-member-values {
+        width: 100%;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .fairness-card {
+        padding: 22px;
+    }
+
+    .fairness-member-values {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}

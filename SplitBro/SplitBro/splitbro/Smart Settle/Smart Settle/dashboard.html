@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Split Bro | Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="background-glow glow-one"></div>
+<div class="background-glow glow-two"></div>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="dashboard.html" class="logo">
+
+            <span class="logo-icon">
+                <i class="fa-solid fa-wallet"></i>
+            </span>
+
+            <span>
+                Split <strong>Bro</strong>
+            </span>
+
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="dashboard.html" class="active">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </a>
+
+            <a href="groups.html">
+                <i class="fa-solid fa-users"></i>
+                Groups
+            </a>
+
+            <a href="addExpense.html">
+                <i class="fa-solid fa-receipt"></i>
+                Add Expense
+            </a>
+
+            <a href="settlement.html">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                Settlement
+            </a>
+
+        </div>
+
+
+        <!-- USER MENU -->
+
+        <div class="user-menu">
+
+            <button
+                class="user-menu-button"
+                id="userMenuButton"
+                type="button"
+            >
+
+                <span
+                    class="user-menu-avatar"
+                    id="navUserAvatar"
+                >
+                    M
+                </span>
+
+                <span
+                    class="user-menu-name"
+                    id="navUserName"
+                >
+                    User
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+
+            <div
+                class="user-dropdown"
+                id="userDropdown"
+            >
+
+                <div class="user-dropdown-header">
+
+                    <strong id="dropdownUserName">
+                        User
+                    </strong>
+
+                    <span id="dropdownUserId">
+                        USER01
+                    </span>
+
+                </div>
+
+
+                <a href="profile.html" class="user-dropdown-item">
+    <i class="fa-solid fa-user"></i>
+    My Profile
+</a>
+
+<a href="history.html" class="user-dropdown-item">
+    <i class="fa-solid fa-clock-rotate-left"></i>
+    Settlement History
+</a>
+
+<a href="#how-it-works" class="user-dropdown-item">
+    <i class="fa-solid fa-circle-question"></i>
+    How It Works
+</a>
+
+<a
+    href="insights.html"
+    class="user-dropdown-item"
+>
+    <i class="fa-solid fa-chart-pie"></i>
+    Spending Insights
+</a>
+
+
+                <button
+                    class="user-dropdown-item logout-item"
+                    id="logoutButton"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="dashboard-page">
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="dashboard-hero">
+
+        <div class="hero-content">
+
+            <span class="section-tag">
+                Split Bro DASHBOARD
+            </span>
+
+
+            <h1>
+                Welcome back,
+                <span id="heroUserName">User</span> 👋
+            </h1>
+
+
+            <p>
+                Manage shared expenses, track your groups
+                and settle payments without the awkward calculations.
+            </p>
+
+
+            <div class="hero-actions">
+
+                <a
+                    href="addExpense.html"
+                    class="primary-button"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Expense
+
+                </a>
+
+
+                <a
+                    href="groups.html"
+                    class="secondary-button"
+                >
+
+                    <i class="fa-solid fa-users"></i>
+
+                    View Groups
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-ticker-card">
+
+            <div class="hero-ticker-header">
+
+                <span class="section-tag">
+                    RECENT ACTIVITY
+                </span>
+
+                <span class="live-badge">
+                    <span></span>
+                    Live
+                </span>
+
+            </div>
+
+
+            <div class="settlement-ticker-viewport">
+
+                <div class="settlement-ticker-track">
+
+                    <div class="settlement-item">
+                        <div class="person">
+                            <span class="avatar avatar-blue">M</span>
+                            <div><strong>Mayur</strong><small>pays</small></div>
+                        </div>
+                        <i class="fa-solid fa-arrow-right settlement-arrow"></i>
+                        <div class="person">
+                            <span class="avatar avatar-purple">S</span>
+                            <div><strong>Satvik</strong><small>receives</small></div>
+                        </div>
+                        <strong class="amount">₹450</strong>
+                    </div>
+
+                    <div class="settlement-item">
+                        <div class="person">
+                            <span class="avatar avatar-green">Sh</span>
+                            <div><strong>Shriya</strong><small>pays</small></div>
+                        </div>
+                        <i class="fa-solid fa-arrow-right settlement-arrow"></i>
+                        <div class="person">
+                            <span class="avatar avatar-blue">M</span>
+                            <div><strong>Mayur</strong><small>receives</small></div>
+                        </div>
+                        <strong class="amount">₹620</strong>
+                    </div>
+
+                    <div class="settlement-item">
+                        <div class="person">
+                            <span class="avatar avatar-purple">S</span>
+                            <div><strong>Satvik</strong><small>pays</small></div>
+                        </div>
+                        <i class="fa-solid fa-arrow-right settlement-arrow"></i>
+                        <div class="person">
+                            <span class="avatar avatar-green">Sh</span>
+                            <div><strong>Shriya</strong><small>receives</small></div>
+                        </div>
+                        <strong class="amount">₹310</strong>
+                    </div>
+
+                    <!-- duplicate set below — required for the seamless loop, keep identical to above -->
+
+                    <div class="settlement-item">
+                        <div class="person">
+                            <span class="avatar avatar-blue">M</span>
+                            <div><strong>Mayur</strong><small>pays</small></div>
+                        </div>
+                        <i class="fa-solid fa-arrow-right settlement-arrow"></i>
+                        <div class="person">
+                            <span class="avatar avatar-purple">S</span>
+                            <div><strong>Satvik</strong><small>receives</small></div>
+                        </div>
+                        <strong class="amount">₹450</strong>
+                    </div>
+
+                    <div class="settlement-item">
+                        <div class="person">
+                            <span class="avatar avatar-green">Sh</span>
+                            <div><strong>Shriya</strong><small>pays</small></div>
+                        </div>
+                        <i class="fa-solid fa-arrow-right settlement-arrow"></i>
+                        <div class="person">
+                            <span class="avatar avatar-blue">M</span>
+                            <div><strong>Mayur</strong><small>receives</small></div>
+                        </div>
+                        <strong class="amount">₹620</strong>
+                    </div>
+
+                    <div class="settlement-item">
+                        <div class="person">
+                            <span class="avatar avatar-purple">S</span>
+                            <div><strong>Satvik</strong><small>pays</small></div>
+                        </div>
+                        <i class="fa-solid fa-arrow-right settlement-arrow"></i>
+                        <div class="person">
+                            <span class="avatar avatar-green">Sh</span>
+                            <div><strong>Shriya</strong><small>receives</small></div>
+                        </div>
+                        <strong class="amount">₹310</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= OVERVIEW ================= -->
+
+    <section class="overview-section">
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-tag">
+                    OVERVIEW
+                </span>
+
+                <h2>
+                    Your money at a glance
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="overview-grid">
+
+
+            <!-- TOTAL SPENT -->
+
+            <div class="overview-card">
+
+                <div class="overview-icon blue-icon">
+
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Group Spending
+                    </span>
+
+                    <strong id="overviewTotal">
+                        ₹0.00
+                    </strong>
+
+                    <small>
+                        Across your active group
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- YOU PAID -->
+
+            <div class="overview-card">
+
+                <div class="overview-icon purple-icon">
+
+                    <i class="fa-solid fa-receipt"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Your Payments
+                    </span>
+
+                    <strong id="overviewPaid">
+                        ₹0.00
+                    </strong>
+
+                    <small>
+                        Amount paid by you
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- BALANCE -->
+
+            <div class="overview-card">
+
+                <div class="overview-icon green-icon">
+
+                    <i class="fa-solid fa-scale-balanced"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        Your Balance
+                    </span>
+
+                    <strong id="overviewBalance">
+                        ₹0.00
+                    </strong>
+
+                    <small id="overviewBalanceText">
+                        All settled
+                    </small>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CURRENT GROUP ================= -->
+
+    <section class="current-group-section">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-tag">
+                    ACTIVE GROUP
+                </span>
+
+                <h2>
+                    Your current group
+                </h2>
+
+            </div>
+
+
+            <a
+                href="groups.html"
+                class="text-link"
+            >
+
+                Manage Groups
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+
+        <div
+            class="current-group-card"
+            id="currentGroupCard"
+        >
+
+            <div class="current-group-main">
+
+
+                <div class="group-symbol">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+
+                <div>
+
+                    <span class="group-label">
+                        CURRENT GROUP
+                    </span>
+
+                    <h3 id="dashboardGroupName">
+                        No Active Group
+                    </h3>
+
+                    <p id="dashboardMembersText">
+                        Create or select a group to get started.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="group-mini-stats">
+
+
+                <div>
+
+                    <span>
+                        Members
+                    </span>
+
+                    <strong id="dashboardMemberCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Expenses
+                    </span>
+
+                    <strong id="expenseCount">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Total
+                    </span>
+
+                    <strong id="totalExpenses">
+                        ₹0.00
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="current-group-actions">
+
+                <a
+                    href="addExpense.html"
+                    class="primary-button small-button"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Expense
+
+                </a>
+
+
+                <a
+                    href="settlement.html"
+                    class="outline-button"
+                >
+
+                    View Settlement
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <section class="dashboard-grid">
+
+
+        <div class="glass-card dashboard-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="section-tag">
+                        PEOPLE
+                    </span>
+
+                    <h2>
+                        Group Members
+                    </h2>
+
+                    <p>
+                        People sharing expenses with you
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="dashboardMembers"
+                class="dashboard-member-list"
+            ></div>
+
+        </div>
+
+
+
+        <div class="glass-card dashboard-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="section-tag">
+                        ACTIVITY
+                    </span>
+
+                    <h2>
+                        Recent Expenses
+                    </h2>
+
+                    <p>
+                        Your latest shared expenses
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="addExpense.html"
+                    class="text-link"
+                >
+
+                    Add New
+
+                </a>
+
+            </div>
+
+
+            <div
+                id="recentExpenses"
+                class="expense-list"
+            ></div>
+
+        </div>
+
+
+    </section>
+
+    <section class="quick-actions-section">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <span class="section-tag">
+                    QUICK ACTIONS
+                </span>
+
+                <h2>
+                    What do you want to do?
+                </h2>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="quick-actions-grid">
+
+
+            <a
+                href="groups.html"
+                class="quick-card"
+            >
+
+                <div class="quick-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+
+                <h3>
+                    Manage Groups
+                </h3>
+
+
+                <p>
+                    Create a new group or join
+                    an existing one.
+                </p>
+
+
+                <span>
+                    Explore Groups
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="addExpense.html"
+                class="quick-card"
+            >
+
+                <div class="quick-icon">
+
+                    <i class="fa-solid fa-receipt"></i>
+
+                </div>
+
+
+                <h3>
+                    Add Expense
+                </h3>
+
+
+                <p>
+                    Record a shared expense
+                    and split it fairly.
+                </p>
+
+
+                <span>
+                    Add Expense
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="settlement.html"
+                class="quick-card"
+            >
+
+                <div class="quick-icon">
+
+                    <i class="fa-solid fa-scale-balanced"></i>
+
+                </div>
+
+
+                <h3>
+                    Settle Up
+                </h3>
+
+
+                <p>
+                    Find out who owes whom
+                    and simplify payments.
+                </p>
+
+
+                <span>
+                    View Settlement
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <section
+        class="how-section"
+        id="how-it-works"
+    >
+
+
+        <div class="how-heading">
+
+            <span class="section-tag">
+                HOW IT WORKS
+            </span>
+
+            <h2>
+                Shared expenses made simple.
+            </h2>
+
+            <p>
+                Four simple steps to keep your group
+                expenses organized.
+            </p>
+
+        </div>
+
+
+
+        <div class="steps-grid">
+
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <div class="step-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+
+                <h3>
+                    Create a Group
+                </h3>
+
+                <p>
+                    Create a group for your trip,
+                    roommates, friends or event.
+                </p>
+
+            </div>
+
+
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <div class="step-icon">
+                    <i class="fa-solid fa-user-plus"></i>
+                </div>
+
+                <h3>
+                    Add Members
+                </h3>
+
+                <p>
+                    Add the people who will be
+                    sharing expenses with you.
+                </p>
+
+            </div>
+
+
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <div class="step-icon">
+                    <i class="fa-solid fa-receipt"></i>
+                </div>
+
+                <h3>
+                    Add Expenses
+                </h3>
+
+                <p>
+                    Record who paid and choose
+                    equal, percentage or custom split.
+                </p>
+
+            </div>
+
+
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    04
+                </div>
+
+                <div class="step-icon">
+                    <i class="fa-solid fa-check-double"></i>
+                </div>
+
+                <h3>
+                    Settle Up
+                </h3>
+
+                <p>
+                    See the simplest way to clear
+                    everyone's outstanding balance.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <section class="dashboard-cta">
+
+        <div>
+
+            <span class="section-tag">
+                Split Bro
+            </span>
+
+            <h2>
+                Ready to make your next expense easier?
+            </h2>
+
+            <p>
+                Add an expense and let Split Bro
+                handle the calculations.
+            </p>
+
+        </div>
+
+
+        <a
+            href="addExpense.html"
+            class="primary-button"
+        >
+
+            Start Adding
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </section>
+
+
+</main>
+
+
+<footer class="dashboard-footer">
+
+
+    <div class="footer-main">
+
+
+        <div class="footer-brand">
+
+            <a
+                href="dashboard.html"
+                class="footer-logo"
+            >
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </span>
+
+                Split <strong>Bro</strong>
+
+            </a>
+
+
+            <p>
+                Split expenses. Stay organized.
+                Keep friendships simple.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Product
+            </h3>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="groups.html">
+                Groups
+            </a>
+
+            <a href="addExpense.html">
+                Add Expense
+            </a>
+
+            <a href="settlement.html">
+                Settlement
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Learn
+            </h3>
+
+            <a href="#how-it-works">
+                How It Works
+            </a>
+
+            <a href="#how-it-works">
+                Getting Started
+            </a>
+
+            <a href="profile.html">
+                My Profile
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h3>
+                Support
+            </h3>
+
+            <a href="contact.html">Contact Us</a>
+
+            <a href="about.html">About Us</a>
+
+            <a href="faq.html">FAQs</a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div
+        class="footer-info"
+        id="footer-about"
+    >
+
+        <div>
+
+            <strong>
+                About Split Bro
+            </strong>
+
+            <p>
+                Split Bro is designed to make
+                shared expenses easier to record,
+                split and settle.
+            </p>
+
+        </div>
+
+
+        <div id="footer-contact">
+
+            <strong>
+                Contact
+            </strong>
+
+            <p>
+                Have feedback?
+                We'd love to hear from you.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 Split Bro. All rights reserved.
+        </span>
+
+        <span>
+            Made for simpler settlements.
+        </span>
+
+    </div>
+
+
+</footer>
+
+<script src="js/storage.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/dashboard-animations.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

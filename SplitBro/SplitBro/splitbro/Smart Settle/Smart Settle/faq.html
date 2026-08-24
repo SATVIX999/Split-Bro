@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Split Bro | FAQ</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a
+                href="dashboard.html"
+                class="logo"
+            >
+
+                <span class="logo-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </span>
+
+                <span>
+                    Split <strong>Bro</strong>
+                </span>
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="groups.html">
+                    Groups
+                </a>
+
+                <a href="addExpense.html">
+                    Add Expense
+                </a>
+
+                <a href="settlement.html">
+                    Settlement
+                </a>
+
+            </div>
+
+
+            <div class="user-menu">
+
+                <button
+                    class="user-menu-button"
+                    id="userMenuButton"
+                >
+
+                    <span
+                        class="user-menu-avatar"
+                        id="navUserAvatar"
+                    >
+                        U
+                    </span>
+
+                    <span
+                        class="user-menu-name"
+                        id="navUserName"
+                    >
+                        User
+                    </span>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+
+                </button>
+
+
+                <div
+                    class="user-dropdown"
+                    id="userDropdown"
+                >
+
+                    <div class="user-dropdown-header">
+
+                        <strong id="dropdownUserName">
+                            User
+                        </strong>
+
+                        <span id="dropdownUserId">
+                            USER01
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        href="profile.html"
+                        class="user-dropdown-item"
+                    >
+                        <i class="fa-solid fa-user"></i>
+                        My Profile
+                    </a>
+
+
+                    <a
+                        href="history.html"
+                        class="user-dropdown-item"
+                    >
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        Settlement History
+                    </a>
+
+
+                    <a
+                        href="insights.html"
+                        class="user-dropdown-item"
+                    >
+                        <i class="fa-solid fa-chart-pie"></i>
+                        Spending Insights
+                    </a>
+
+
+                    <a
+                        href="faq.html"
+                        class="user-dropdown-item"
+                    >
+                        <i class="fa-solid fa-circle-question"></i>
+                        FAQs
+                    </a>
+
+
+                    <button
+                        class="user-dropdown-item logout-item"
+                        id="logoutButton"
+                    >
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+                    </button>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main class="faq-page">
+
+        <section class="info-hero">
+
+            <span class="section-tag">
+                HELP CENTER
+            </span>
+
+            <h1>
+                Frequently Asked Questions
+            </h1>
+
+            <p>
+                Find quick answers about groups, expenses, splitting and
+                settlements in Split Bro.
+            </p>
+
+        </section>
+
+
+        <section class="faq-container">
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>
+                        What is Split Bro?
+                    </span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Split Bro is a web application that helps groups manage
+                        shared expenses, split costs and understand who needs to
+                        pay whom.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>
+                        How do I create a group?
+                    </span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Go to the Groups page and create a new group. A unique
+                        group code is generated, which can be shared with other
+                        members so they can join the same group.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>
+                        How can I join an existing group?
+                    </span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Use the Join Group option and enter the group code shared
+                        by a member of that group.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>
+                        How are expenses split?
+                    </span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        Split Bro supports equal splitting, percentage-based
+                        splitting and custom amounts, depending on how the group
+                        wants to divide an expense.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>
+                        What is the Settlement feature?
+                    </span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        The Settlement feature calculates the net balance of each
+                        member and helps identify who should pay and who should
+                        receive money to settle the group's expenses.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>
+                        What is the Fairness Detector?
+                    </span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        The Fairness Detector compares contributions and expense
+                        shares to help the group understand how evenly the
+                        spending responsibility is distributed.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="faq-item">
+
+                <button class="faq-question">
+
+                    <span>
+                        Where is my data stored?
+                    </span>
+
+                    <i class="fa-solid fa-plus"></i>
+
+                </button>
+
+                <div class="faq-answer">
+
+                    <p>
+                        In the current version of Split Bro, application data is
+                        stored in the browser using localStorage. This allows the
+                        data to remain available even after refreshing the page
+                        in the same browser.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/faq.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Split Bro | Groups</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/groups.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+<header class="groups-header">
+
+    <a
+        href="dashboard.html"
+        class="groups-logo"
+    >
+
+        <span class="groups-logo-icon">
+            <i class="fa-solid fa-wallet"></i>
+        </span>
+
+        Split <strong>Bro</strong>
+
+    </a>
+
+
+    <nav class="groups-nav">
+
+        <a href="dashboard.html">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </a>
+
+
+        <a
+            href="groups.html"
+            class="active"
+        >
+
+            <i class="fa-solid fa-users"></i>
+
+            Groups
+
+        </a>
+
+
+        <a href="addExpense.html">
+
+            <i class="fa-solid fa-receipt"></i>
+
+            Add Expense
+
+        </a>
+
+
+        <a href="settlement.html">
+
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+            Settlement
+
+        </a>
+
+    </nav>
+
+
+    <div class="user-menu">
+
+        <button
+            type="button"
+            class="user-menu-button"
+            id="userMenuButton"
+        >
+
+            <span
+                class="user-menu-avatar"
+                id="navUserAvatar"
+            >
+                M
+            </span>
+
+            <span
+                class="user-menu-name"
+                id="navUserName"
+            >
+                User
+            </span>
+
+            <i class="fa-solid fa-chevron-down"></i>
+
+        </button>
+
+
+        <div
+            class="user-dropdown"
+            id="userDropdown"
+        >
+
+            <div class="user-dropdown-header">
+
+                <strong id="dropdownUserName">
+                    User
+                </strong>
+
+                <span id="dropdownUserId">
+                    USER01
+                </span>
+
+            </div>
+
+
+            <a
+                href="profile.html"
+                class="user-dropdown-item"
+            >
+
+                <i class="fa-solid fa-user"></i>
+
+                My Profile
+
+            </a>
+
+
+            <a
+                href="history.html"
+                class="user-dropdown-item"
+            >
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                Settlement History
+
+            </a>
+
+
+            <a
+                href="dashboard.html#how-it-works"
+                class="user-dropdown-item"
+            >
+
+                <i class="fa-solid fa-circle-question"></i>
+
+                How It Works
+
+            </a>
+
+
+            <a
+                href="insights.html"
+                class="user-dropdown-item"
+            >
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                Spending Insights
+
+            </a>
+
+
+            <button
+                type="button"
+                class="user-dropdown-item logout-item"
+                id="logoutButton"
+            >
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="groups-main">
+
+
+    <section class="groups-title-section">
+
+        <div>
+
+            <span class="groups-eyebrow">
+                YOUR EXPENSE GROUPS
+            </span>
+
+            <h1>
+                My Groups
+            </h1>
+
+            <p>
+                Manage trips, events and shared expenses with different people.
+            </p>
+
+        </div>
+
+
+        <div class="group-title-actions">
+
+    <button
+        type="button"
+        class="join-group-button"
+        id="openJoinGroup"
+    >
+        <i class="fa-solid fa-link"></i>
+        Join Group
+    </button>
+
+    <button
+        type="button"
+        class="create-group-button"
+        id="openGroupModal"
+    >
+        <i class="fa-solid fa-plus"></i>
+        Create New Group
+    </button>
+
+</div>
+
+    </section>
+
+
+    <section
+        class="groups-grid"
+        id="groupsContainer"
+    ></section>
+
+
+    <section
+        class="empty-groups"
+        id="emptyGroups"
+    >
+
+        <div class="empty-groups-icon">
+
+            <i class="fa-solid fa-users"></i>
+
+        </div>
+
+
+        <h2>
+            No groups yet
+        </h2>
+
+
+        <p>
+            Create your first group or join an existing group.
+        </p>
+
+
+        <div class="empty-group-buttons">
+
+            <button
+                type="button"
+                class="create-group-button"
+                id="emptyCreateGroup"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+                Create New Group
+
+            </button>
+
+
+            <button
+                type="button"
+                class="join-group-button"
+                id="emptyJoinGroup"
+            >
+
+                <i class="fa-solid fa-link"></i>
+
+                Join Group
+
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<div
+    class="group-modal"
+    id="createGroupModal"
+>
+
+    <div class="group-modal-box">
+
+        <button
+            type="button"
+            class="close-modal"
+            id="closeCreateModal"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="modal-icon">
+
+            <i class="fa-solid fa-users"></i>
+
+        </div>
+
+
+        <h2>
+            Create New Group
+        </h2>
+
+
+        <p class="modal-description">
+            Create a separate group for another trip, event or activity.
+        </p>
+
+
+        <form id="groupForm">
+
+
+            <div class="group-field">
+
+                <label for="groupName">
+                    Group Name
+                </label>
+
+
+                <div class="group-input">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    <input
+                        type="text"
+                        id="groupName"
+                        placeholder="Example: Rishikesh Trip"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <span
+                    class="group-error"
+                    id="groupNameError"
+                ></span>
+
+            </div>
+
+
+            <div class="member-section">
+
+                <div class="member-section-heading">
+
+                    <div>
+
+                        <h3>
+                            Add Members
+                        </h3>
+
+                        <p>
+                            Add registered users or people who do not have an account yet.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="member-add-options">
+
+                    <button
+                        type="button"
+                        class="member-mode-button active"
+                        id="registeredMemberMode"
+                    >
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                        Registered User
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="member-mode-button"
+                        id="guestMemberMode"
+                    >
+
+                        <i class="fa-solid fa-user"></i>
+
+                        Guest Member
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="registeredMemberBox"
+                >
+
+                    <div class="member-add-row">
+
+                        <div class="group-input">
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                            <input
+                                type="text"
+                                id="memberUserId"
+                                placeholder="Example: SATVIK01"
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="add-member-button"
+                            id="addMemberButton"
+                        >
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="guestMemberBox"
+                    style="display:none;"
+                >
+
+                    <div class="group-field">
+
+                        <label for="guestMemberName">
+                            Member Name
+                        </label>
+
+
+                        <div class="group-input">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="guestMemberName"
+                                placeholder="Example: Dad"
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="add-member-button"
+                        id="addGuestMemberButton"
+                    >
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Add Guest
+
+                    </button>
+
+                </div>
+
+
+                <span
+                    class="group-error"
+                    id="memberError"
+                ></span>
+
+
+                <div
+                    class="selected-members"
+                    id="selectedMembers"
+                ></div>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="cancelCreateGroup"
+                >
+
+                    Cancel
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="submit-group-button"
+                >
+
+                    <i class="fa-solid fa-check"></i>
+
+                    Create Group
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<div
+    class="group-modal"
+    id="joinGroupModal"
+>
+
+    <div class="group-modal-box">
+
+        <button
+            type="button"
+            class="close-modal"
+            id="closeJoinModal"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="modal-icon join-icon">
+
+            <i class="fa-solid fa-link"></i>
+
+        </div>
+
+
+        <h2>
+            Join a Group
+        </h2>
+
+
+        <p class="modal-description">
+            Enter the Group Code shared by the group creator.
+        </p>
+
+
+        <form id="joinGroupForm">
+
+
+            <div class="group-field">
+
+                <label for="joinGroupCode">
+                    Group Code
+                </label>
+
+
+                <div class="group-input">
+
+                    <i class="fa-solid fa-key"></i>
+
+                    <input
+                        type="text"
+                        id="joinGroupCode"
+                        placeholder="Example: GS7K92"
+                        maxlength="8"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <span
+                    class="group-error"
+                    id="joinGroupError"
+                ></span>
+
+            </div>
+
+
+            <div
+                id="guestClaimBox"
+                style="display:none;"
+            >
+
+                <div class="group-field">
+
+                    <label for="guestClaimSelect">
+                        Existing Guest Member
+                    </label>
+
+
+                    <select
+                        id="guestClaimSelect"
+                        class="group-input"
+                    >
+
+                        <option value="">
+                            Join as a new member
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="cancelJoinGroup"
+                >
+
+                    Cancel
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="submit-group-button"
+                >
+
+                    <i class="fa-solid fa-right-to-bracket"></i>
+
+                    Join Group
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<div
+    class="group-modal"
+    id="editGroupModal"
+>
+
+    <div class="group-modal-box">
+
+        <button
+            type="button"
+            class="close-modal"
+            id="closeEditModal"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="modal-icon">
+
+            <i class="fa-solid fa-pen"></i>
+
+        </div>
+
+
+        <h2>
+            Edit Group
+        </h2>
+
+
+        <p class="modal-description">
+            Update your group name and manage members.
+        </p>
+
+
+        <form id="editGroupForm">
+
+
+            <div class="group-field">
+
+                <label for="editGroupName">
+                    Group Name
+                </label>
+
+
+                <div class="group-input">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    <input
+                        type="text"
+                        id="editGroupName"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <span
+                    class="group-error"
+                    id="editGroupNameError"
+                ></span>
+
+            </div>
+
+
+            <div class="member-section">
+
+                <div class="member-section-heading">
+
+                    <div>
+
+                        <h3>
+                            Group Members
+                        </h3>
+
+                        <p>
+                            Add or remove members from this group.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="selected-members"
+                    id="editSelectedMembers"
+                ></div>
+
+
+                <div class="member-add-options">
+
+                    <button
+                        type="button"
+                        class="member-mode-button active"
+                        id="editRegisteredMemberMode"
+                    >
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                        Registered User
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="member-mode-button"
+                        id="editGuestMemberMode"
+                    >
+
+                        <i class="fa-solid fa-user"></i>
+
+                        Guest Member
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="editRegisteredMemberBox"
+                >
+
+                    <div class="member-add-row">
+
+                        <div class="group-input">
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                            <input
+                                type="text"
+                                id="editMemberUserId"
+                                placeholder="Enter User ID"
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="add-member-button"
+                            id="editAddMemberButton"
+                        >
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="editGuestMemberBox"
+                    style="display:none;"
+                >
+
+                    <div class="group-field">
+
+                        <label for="editGuestMemberName">
+                            Guest Name
+                        </label>
+
+
+                        <div class="group-input">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="editGuestMemberName"
+                                placeholder="Enter Guest Name"
+                                autocomplete="off"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="add-member-button"
+                        id="editAddGuestMemberButton"
+                    >
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Add Guest
+
+                    </button>
+
+                </div>
+
+
+                <span
+                    class="group-error"
+                    id="editMemberError"
+                ></span>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="cancelEditGroup"
+                >
+
+                    Cancel
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="submit-group-button"
+                >
+
+                    <i class="fa-solid fa-check"></i>
+
+                    Save Changes
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="js/storage.js"></script>
+<script src="js/groups.js"></script>
+<script src="js/groups-animations.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

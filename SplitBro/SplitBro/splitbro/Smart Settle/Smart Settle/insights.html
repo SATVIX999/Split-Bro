@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Split Bro | Spending Insights</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/insights.css"
+    >
+
+</head>
+
+<body>
+
+<div class="background-glow glow-one"></div>
+<div class="background-glow glow-two"></div>
+
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a
+            href="dashboard.html"
+            class="logo"
+        >
+
+            <span class="logo-icon">
+                <i class="fa-solid fa-wallet"></i>
+            </span>
+
+            <span>
+                Split <strong>Bro</strong>
+            </span>
+
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="groups.html">
+                Groups
+            </a>
+
+            <a href="addExpense.html">
+                Add Expense
+            </a>
+
+            <a href="settlement.html">
+                Settlement
+            </a>
+
+        </div>
+
+
+        <div class="user-menu">
+
+            <button
+                class="user-menu-button"
+                id="userMenuButton"
+            >
+
+                <span
+                    class="user-menu-avatar"
+                    id="navUserAvatar"
+                >
+                    M
+                </span>
+
+                <span
+                    class="user-menu-name"
+                    id="navUserName"
+                >
+                    User
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+
+            <div
+                class="user-dropdown"
+                id="userDropdown"
+            >
+
+                <div class="user-dropdown-header">
+
+                    <strong id="dropdownUserName">
+                        User
+                    </strong>
+
+                    <span id="dropdownUserId">
+                        USER01
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="profile.html"
+                    class="user-dropdown-item"
+                >
+
+                    <i class="fa-solid fa-user"></i>
+
+                    My Profile
+
+                </a>
+
+
+                <a
+                    href="history.html"
+                    class="user-dropdown-item"
+                >
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    Settlement History
+
+                </a>
+
+
+                <a
+                    href="insights.html"
+                    class="user-dropdown-item"
+                >
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                    Spending Insights
+
+                </a>
+
+
+                <a
+                    href="dashboard.html#how-it-works"
+                    class="user-dropdown-item"
+                >
+
+                    <i class="fa-solid fa-circle-question"></i>
+
+                    How It Works
+
+                </a>
+
+
+                <button
+                    class="user-dropdown-item logout-item"
+                    id="logoutButton"
+                >
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main class="insights-page">
+
+
+    <section class="insights-heading">
+
+        <div>
+
+            <span class="section-tag">
+                SMART ANALYTICS
+            </span>
+
+            <h1 id="insightsGroupName">
+                Spending Insights
+            </h1>
+
+            <p>
+                Understand where your group's money is actually going.
+            </p>
+
+        </div>
+
+        <div class="insights-heading-icon">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+        </div>
+
+    </section>
+
+
+    <section class="insights-stats">
+
+
+        <div class="insight-stat-card">
+
+            <div class="insight-stat-icon">
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+            </div>
+
+            <div>
+
+                <span>
+                    Total Spent
+                </span>
+
+                <strong id="insightTotal">
+                    ₹0.00
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="insight-stat-card">
+
+            <div class="insight-stat-icon">
+
+                <i class="fa-solid fa-receipt"></i>
+
+            </div>
+
+            <div>
+
+                <span>
+                    Expenses
+                </span>
+
+                <strong id="insightCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="insight-stat-card">
+
+            <div class="insight-stat-icon">
+
+                <i class="fa-solid fa-calculator"></i>
+
+            </div>
+
+            <div>
+
+                <span>
+                    Average Expense
+                </span>
+
+                <strong id="insightAverage">
+                    ₹0.00
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="insight-stat-card">
+
+            <div class="insight-stat-icon">
+
+                <i class="fa-solid fa-crown"></i>
+
+            </div>
+
+            <div>
+
+                <span>
+                    Highest Category
+                </span>
+
+                <strong id="highestCategory">
+                    -
+                </strong>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+
+    <section class="insights-grid">
+
+
+        <div class="glass-card category-card">
+
+            <div class="insights-panel-header">
+
+                <div>
+
+                    <span class="section-tag">
+                        BREAKDOWN
+                    </span>
+
+                    <h2>
+                        Spending by Category
+                    </h2>
+
+                    <p>
+                        See which categories consume most of your group's budget.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="categoryList"
+                class="category-list"
+            ></div>
+
+        </div>
+
+
+        <div class="glass-card chart-card">
+
+            <div class="insights-panel-header">
+
+                <div>
+
+                    <span class="section-tag">
+                        DISTRIBUTION
+                    </span>
+
+                    <h2>
+                        Expense Distribution
+                    </h2>
+
+                    <p>
+                        Visual representation of your spending.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="categoryChart"
+                class="category-chart"
+            ></div>
+
+        </div>
+
+
+    </section>
+
+    <section class="glass-card fairness-card">
+
+    <div class="insights-panel-header">
+
+        <div>
+
+            <span class="section-tag">
+                FAIRNESS ANALYSIS
+            </span>
+
+            <h2>
+                ⚖️ Group Fairness Detector
+            </h2>
+
+            <p>
+                See how fairly the expenses are distributed among group members.
+            </p>
+
+        </div>
+
+        <div class="fairness-score-box">
+
+            <span>
+                Fairness Score
+            </span>
+
+            <strong id="fairnessScore">
+                0/100
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="fairnessMessage"
+        class="fairness-message"
+    ></div>
+
+
+    <div
+        id="fairnessMembers"
+        class="fairness-members"
+    ></div>
+
+</section>
+
+
+    <section class="glass-card top-expenses-card">
+
+        <div class="insights-panel-header">
+
+            <div>
+
+                <span class="section-tag">
+                    TOP EXPENSES
+                </span>
+
+                <h2>
+                    Where Did The Money Go?
+                </h2>
+
+                <p>
+                    Your biggest expenses in this group.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="topExpenses"
+            class="top-expenses"
+        ></div>
+
+    </section>
+
+
+    <section
+        id="insightsEmpty"
+        class="insights-empty"
+    >
+
+        <div class="insights-empty-icon">
+
+            <i class="fa-solid fa-chart-column"></i>
+
+        </div>
+
+        <h2>
+            No spending data yet
+        </h2>
+
+        <p>
+            Add some expenses to see your group's spending insights.
+        </p>
+
+        <a
+            href="addExpense.html"
+            class="primary-button"
+        >
+
+            <i class="fa-solid fa-plus"></i>
+
+            Add Expense
+
+        </a>
+
+    </section>
+
+
+</main>
+
+
+<script src="js/storage.js"></script>
+<script src="js/insights.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

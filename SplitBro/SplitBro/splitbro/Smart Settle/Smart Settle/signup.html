@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Bro | Sign Up</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+    <div class="background-glow glow-three"></div>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </span>
+                Split <strong>Bro</strong>
+            </a>
+
+            <a href="login.html" class="nav-button">
+                Login
+            </a>
+        </nav>
+    </header>
+
+    <main class="auth-page">
+
+        <div class="auth-container">
+
+            <div class="auth-left">
+                <span class="hero-badge">
+                    <span></span>
+                    SMART EXPENSE MANAGEMENT
+                </span>
+
+                <h1>
+                    Split Smarter.<br>
+                    <span>Settle Together.</span>
+                </h1>
+
+                <p>
+                    Create your Split Bro account and keep track of shared
+                    expenses, group balances and settlements in one place.
+                </p>
+
+                <div class="auth-benefits">
+
+                    <div class="auth-benefit">
+                        <div class="auth-benefit-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div>
+                            <strong>Your own User ID</strong>
+                            <p>Use your unique ID or email to login.</p>
+                        </div>
+                    </div>
+
+                    <div class="auth-benefit">
+                        <div class="auth-benefit-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div>
+                            <strong>Manage group expenses</strong>
+                            <p>Keep everyone connected to the same group.</p>
+                        </div>
+                    </div>
+
+                    <div class="auth-benefit">
+                        <div class="auth-benefit-icon">
+                            <i class="fa-solid fa-chart-simple"></i>
+                        </div>
+                        <div>
+                            <strong>Know your balance</strong>
+                            <p>See what you need to pay or receive.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="auth-card">
+
+                <div class="auth-card-header">
+                    <div class="auth-card-icon">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </div>
+
+                    <h2>Create Account</h2>
+
+                    <p>
+                        Join Split Bro and start managing expenses.
+                    </p>
+                </div>
+
+                <form id="signupForm">
+
+                    <div class="auth-field">
+                        <label for="signupName">Full Name</label>
+
+                        <div class="auth-input">
+                            <i class="fa-solid fa-user"></i>
+                            <input
+                                type="text"
+                                id="signupName"
+                                placeholder="Enter your name"
+                                required
+                            >
+                        </div>
+
+                        <span id="nameError" class="auth-error"></span>
+                    </div>
+
+                    <div class="auth-field">
+                        <label for="signupEmail">Email Address</label>
+
+                        <div class="auth-input">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input
+                                type="email"
+                                id="signupEmail"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+
+                        <span id="emailError" class="auth-error"></span>
+                    </div>
+
+                    <div class="auth-field">
+                        <label for="signupUserId">Create User ID</label>
+
+                        <div class="auth-input">
+                            <i class="fa-solid fa-id-card"></i>
+                            <input
+                                type="text"
+                                id="signupUserId"
+                                placeholder="Example: MAYUR01"
+                                required
+                            >
+                        </div>
+
+                        <span id="userIdError" class="auth-error"></span>
+                    </div>
+
+                    <div class="auth-field">
+                        <label for="signupPassword">Password</label>
+
+                        <div class="auth-input">
+                            <i class="fa-solid fa-lock"></i>
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                placeholder="Create a password"
+                                required
+                            >
+                            <button type="button" class="password-toggle" onclick="togglePassword('signupPassword', this)">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="password-requirements">
+                        <span>6+ characters</span>
+                        <span>Uppercase</span>
+                        <span>Lowercase</span>
+                        <span>Number</span>
+                        <span>Symbol / _</span>
+                       </div>
+
+                        <span id="passwordError" class="auth-error"></span>
+                    </div>
+
+                    <div id="signupMessage" class="auth-message"></div>
+
+                    <button type="submit" class="auth-submit">
+                        Create Account
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </form>
+
+                <div class="auth-divider">
+                    <span>Already have an account?</span>
+                </div>
+
+                <a href="login.html" class="auth-switch">
+                    Login to Split Bro
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

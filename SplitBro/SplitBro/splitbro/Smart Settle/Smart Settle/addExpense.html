@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Split Bro | Add Expense</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/expense.css"
+    >
+
+</head>
+
+<body>
+
+<div class="background-glow glow-one"></div>
+<div class="background-glow glow-two"></div>
+
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a
+            href="dashboard.html"
+            class="logo"
+        >
+
+            <span class="logo-icon">
+                <i class="fa-solid fa-wallet"></i>
+            </span>
+
+            <span>
+                Split <strong>Bro</strong>
+            </span>
+
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="groups.html">
+                Groups
+            </a>
+
+            <a
+                href="addExpense.html"
+                class="active"
+            >
+                Add Expense
+            </a>
+
+            <a href="settlement.html">
+                Settlement
+            </a>
+
+        </div>
+
+
+        <div class="user-menu">
+
+            <button
+                class="user-menu-button"
+                id="userMenuButton"
+            >
+
+                <span
+                    class="user-menu-avatar"
+                    id="navUserAvatar"
+                >
+                    M
+                </span>
+
+                <span
+                    class="user-menu-name"
+                    id="navUserName"
+                >
+                    User
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+
+            <div
+                class="user-dropdown"
+                id="userDropdown"
+            >
+
+                <div class="user-dropdown-header">
+
+                    <strong id="dropdownUserName">
+                        User
+                    </strong>
+
+                    <span id="dropdownUserId">
+                        USER01
+                    </span>
+
+                </div>
+
+
+                <a href="profile.html" class="user-dropdown-item">
+    <i class="fa-solid fa-user"></i>
+    My Profile
+</a>
+
+<a href="history.html" class="user-dropdown-item">
+    <i class="fa-solid fa-clock-rotate-left"></i>
+    Settlement History
+</a>
+
+<a href="dashboard.html#how-it-works" class="user-dropdown-item">
+    <i class="fa-solid fa-circle-question"></i>
+    How It Works
+</a>
+
+<a
+    href="insights.html"
+    class="user-dropdown-item"
+>
+    <i class="fa-solid fa-chart-pie"></i>
+    Spending Insights
+</a>
+
+<button
+    class="user-dropdown-item logout-item"
+    id="logoutButton"
+>
+    <i class="fa-solid fa-right-from-bracket"></i>
+    Logout
+</button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main class="expense-page">
+
+    <section class="expense-heading">
+
+        <div>
+
+            <span class="section-tag">
+                SHARED EXPENSE
+            </span>
+
+            <h1>
+                Add Expense
+            </h1>
+
+            <p>
+                Record an expense and let Split Bro divide it fairly.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="expense-layout">
+
+
+        <div class="expense-form-card">
+
+            <form id="expenseForm">
+
+
+                <div class="expense-field">
+
+                    <label for="expenseTitle">
+                        Expense Name
+                    </label>
+
+                    <div class="expense-input">
+
+                        <i class="fa-solid fa-pen"></i>
+
+                        <input
+                            type="text"
+                            id="expenseTitle"
+                            placeholder="Example: Dinner"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                    <span
+                        class="expense-error"
+                        id="titleError"
+                    ></span>
+
+                </div>
+
+
+                <div class="expense-two-columns">
+
+                    <div class="expense-field">
+
+                        <label for="expenseAmount">
+                            Amount
+                        </label>
+
+                        <div class="expense-input">
+
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                            <input
+                                type="number"
+                                id="expenseAmount"
+                                placeholder="0.00"
+                                min="1"
+                                step="0.01"
+                            >
+
+                        </div>
+
+                        <span
+                            class="expense-error"
+                            id="amountError"
+                        ></span>
+
+                    </div>
+
+
+                    <div class="expense-field">
+
+                        <label for="expenseCategory">
+                            Category
+                        </label>
+
+                        <div class="expense-input">
+
+                            <i class="fa-solid fa-layer-group"></i>
+
+                            <select id="expenseCategory">
+
+                                <option value="">
+                                    Select category
+                                </option>
+
+                                <option value="Food">
+                                    Food
+                                </option>
+
+                                <option value="Hotel">
+                                    Hotel
+                                </option>
+
+                                <option value="Transport">
+                                    Transport
+                                </option>
+
+                                <option value="Activities">
+                                    Activities
+                                </option>
+
+                                <option value="Shopping">
+                                    Shopping
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <span
+                            class="expense-error"
+                            id="categoryError"
+                        ></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="expense-field">
+
+                    <label for="expensePayer">
+                        Paid By
+                    </label>
+
+                    <div class="expense-input">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <select id="expensePayer"></select>
+
+                    </div>
+
+                    <span
+                        class="expense-error"
+                        id="payerError"
+                    ></span>
+
+                </div>
+
+
+                <div class="split-section">
+
+                    <div class="split-heading">
+
+                        <div>
+
+                            <h2>
+                                Split Among
+                            </h2>
+
+                            <p>
+                                Select the members sharing this expense.
+                            </p>
+
+                        </div>
+
+                        <button
+                            type="button"
+                            id="selectAllMembers"
+                        >
+                            Select All
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="splitMembers"
+                        class="split-members"
+                    ></div>
+
+                    <span
+                        class="expense-error"
+                        id="membersError"
+                    ></span>
+
+                </div>
+
+
+                <div class="split-type-section">
+
+                    <h2>
+                        Split Type
+                    </h2>
+
+                    <div class="split-type-options">
+
+                        <label class="split-option">
+
+                            <input
+                                type="radio"
+                                name="splitType"
+                                value="equal"
+                                checked
+                            >
+
+                            <span>
+                                <i class="fa-solid fa-equals"></i>
+                                Equal
+                            </span>
+
+                        </label>
+
+
+                        <label class="split-option">
+
+                            <input
+                                type="radio"
+                                name="splitType"
+                                value="percentage"
+                            >
+
+                            <span>
+                                <i class="fa-solid fa-percent"></i>
+                                Percentage
+                            </span>
+
+                        </label>
+
+
+                        <label class="split-option">
+
+                            <input
+                                type="radio"
+                                name="splitType"
+                                value="custom"
+                            >
+
+                            <span>
+                                <i class="fa-solid fa-sliders"></i>
+                                Custom
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="splitValues"
+                    class="split-values"
+                ></div>
+
+
+                <div
+                    id="splitSummary"
+                    class="split-summary"
+                >
+
+                    <span>
+                        Your split
+                    </span>
+
+                    <strong>
+                        ₹0.00
+                    </strong>
+
+                </div>
+
+
+                <span
+                    class="expense-error form-error"
+                    id="formError"
+                ></span>
+
+
+                <div class="expense-actions">
+
+                    <a
+                        href="dashboard.html"
+                        class="expense-cancel"
+                    >
+                        Cancel
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="expense-submit"
+                    >
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Add Expense
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+
+        <aside class="expense-preview-card">
+
+            <div class="preview-icon">
+                <i class="fa-solid fa-receipt"></i>
+            </div>
+
+            <span class="section-tag">
+                Split Bro
+            </span>
+
+            <h2>
+                Make every expense count.
+            </h2>
+
+            <p>
+                Split Bro will calculate everyone's share and use it later to create the simplest settlement plan.
+            </p>
+
+
+            <div class="preview-item">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <span>
+                    Fair splitting
+                </span>
+
+            </div>
+
+
+            <div class="preview-item">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <span>
+                    Category tracking
+                </span>
+
+            </div>
+
+
+            <div class="preview-item">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <span>
+                    Automatic balance calculation
+                </span>
+
+            </div>
+
+        </aside>
+
+
+    </section>
+
+</main>
+
+
+<script src="js/storage.js"></script>
+<script src="js/expense.js"></script>
+<script src="js/expense-animations.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

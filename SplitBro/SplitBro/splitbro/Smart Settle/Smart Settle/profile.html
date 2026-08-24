@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Split Bro | Account Settings</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <a href="dashboard.html" class="logo">
+                <span class="logo-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </span>
+
+                Split <strong>Bro</strong>
+            </a>
+
+            <a href="dashboard.html" class="profile-back">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Dashboard
+            </a>
+
+        </nav>
+
+    </header>
+
+    <main class="account-page">
+
+        <div class="account-container">
+
+            <div class="account-heading">
+
+                <span class="account-tag">
+                    ACCOUNT SETTINGS
+                </span>
+
+                <h1>Account Settings</h1>
+
+                <p>
+                    Manage your personal information and account details.
+                </p>
+
+            </div>
+
+            <section class="account-card">
+
+                <div class="account-card-heading">
+
+                    <div class="account-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div>
+                        <h2>Personal Information</h2>
+
+                        <p>
+                            Update your account information
+                        </p>
+                    </div>
+
+                </div>
+
+                <form id="profileForm">
+
+                    <div class="account-grid">
+
+                        <div class="account-field">
+
+                            <label for="profileName">
+                                Full Name
+                            </label>
+
+                            <div class="account-input">
+
+                                <i class="fa-solid fa-user"></i>
+
+                                <input
+                                    type="text"
+                                    id="profileName"
+                                    placeholder="Enter your name"
+                                    disabled
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <div class="account-field">
+
+                            <label for="profileUserId">
+                                User ID
+                            </label>
+
+                            <div class="account-input locked-input">
+
+                                <i class="fa-solid fa-id-card"></i>
+
+                                <input
+                                    type="text"
+                                    id="profileUserId"
+                                    disabled
+                                >
+
+                                <i class="fa-solid fa-lock input-lock"></i>
+
+                            </div>
+
+                            <span class="field-note">
+                                Unique ID cannot be changed
+                            </span>
+
+                        </div>
+
+                        <div class="account-field">
+
+                            <label for="profileEmail">
+                                Email Address
+                            </label>
+
+                            <div class="account-input">
+
+                                <i class="fa-solid fa-envelope"></i>
+
+                                <input
+                                    type="email"
+                                    id="profileEmail"
+                                    placeholder="Enter your email"
+                                    disabled
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <div class="account-field">
+
+                            <label for="profilePhone">
+                                Phone Number
+                            </label>
+
+                            <div class="account-input">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                                <input
+                                    type="tel"
+                                    id="profilePhone"
+                                    placeholder="Enter 10 digit phone number"
+                                    maxlength="10"
+                                    disabled
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        id="profileMessage"
+                        class="profile-message"
+                    ></div>
+
+                    <div class="account-actions">
+
+                        <button
+                            type="button"
+                            id="editProfile"
+                            class="edit-profile-button"
+                        >
+                            <i class="fa-solid fa-pen"></i>
+                            Edit Profile
+                        </button>
+
+                        <button
+                            type="submit"
+                            id="saveProfile"
+                            class="save-profile-button"
+                        >
+                            <i class="fa-solid fa-check"></i>
+                            Save Changes
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+            <section class="account-card security-card">
+
+    <div class="account-card-heading">
+
+        <div class="account-icon security-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <div>
+            <h2>Change Password</h2>
+
+            <p>
+                Verify your current password before creating a new one
+            </p>
+        </div>
+
+    </div>
+
+    <form id="passwordForm">
+
+        <div class="password-verify-row">
+
+            <div class="account-field">
+
+                <label for="currentPassword">
+                    Current Password
+                </label>
+
+                <div class="account-input">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        id="currentPassword"
+                        placeholder="Enter current password"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+            <div class="verify-password-container">
+
+                <button
+                    type="button"
+                    id="verifyPassword"
+                    class="verify-password-button"
+                >
+                    <i class="fa-solid fa-shield-check"></i>
+                    Verify Password
+                </button>
+
+            </div>
+
+        </div>
+
+        <div
+            id="verificationMessage"
+            class="profile-message"
+        ></div>
+
+        <div
+            id="newPasswordSection"
+            class="new-password-section"
+        >
+
+            <div class="new-password-header">
+
+                <div>
+                    <h3>Create New Password</h3>
+
+                    <p>
+                        Your new password must meet all the requirements.
+                    </p>
+                </div>
+
+                <span class="verified-badge">
+                    <i class="fa-solid fa-check"></i>
+                    Verified
+                </span>
+
+            </div>
+
+            <div class="account-field">
+
+                <label for="newPassword">
+                    New Password
+                </label>
+
+                <div class="account-input">
+
+                    <i class="fa-solid fa-key"></i>
+
+                    <input
+                        type="password"
+                        id="newPassword"
+                        placeholder="Create a new password"
+                    >
+
+                </div>
+
+            </div>
+
+            <div class="password-check-list">
+
+                <div id="lengthCheck">
+                    <i class="fa-solid fa-circle"></i>
+                    Minimum 6 characters
+                </div>
+
+                <div id="uppercaseCheck">
+                    <i class="fa-solid fa-circle"></i>
+                    One uppercase letter
+                </div>
+
+                <div id="lowercaseCheck">
+                    <i class="fa-solid fa-circle"></i>
+                    One lowercase letter
+                </div>
+
+                <div id="numberCheck">
+                    <i class="fa-solid fa-circle"></i>
+                    One number
+                </div>
+
+                <div id="symbolCheck">
+                    <i class="fa-solid fa-circle"></i>
+                    One symbol or underscore
+                </div>
+
+            </div>
+
+            <div
+                id="passwordMessage"
+                class="profile-message"
+            ></div>
+
+            <div class="account-actions">
+
+                <button
+                    type="submit"
+                    class="save-profile-button password-save-button"
+                >
+                    <i class="fa-solid fa-lock"></i>
+                    Change Password
+                </button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</section>
+
+        </div>
+
+    </main>
+
+    <script src="js/storage.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

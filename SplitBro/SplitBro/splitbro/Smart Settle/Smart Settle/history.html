@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Split Bro | History</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/history.css"
+    >
+
+</head>
+
+<body>
+
+<div class="background-glow glow-one"></div>
+<div class="background-glow glow-two"></div>
+
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a
+            href="dashboard.html"
+            class="logo"
+        >
+
+            <span class="logo-icon">
+                <i class="fa-solid fa-wallet"></i>
+            </span>
+
+            <span>
+                Split <strong>Bro</strong>
+            </span>
+
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="groups.html">
+                Groups
+            </a>
+
+            <a href="addExpense.html">
+                Add Expense
+            </a>
+
+            <a href="settlement.html">
+                Settlement
+            </a>
+
+        </div>
+
+
+        <div class="user-menu">
+
+            <button
+                class="user-menu-button"
+                id="userMenuButton"
+            >
+
+                <span
+                    class="user-menu-avatar"
+                    id="navUserAvatar"
+                >
+                    M
+                </span>
+
+                <span
+                    class="user-menu-name"
+                    id="navUserName"
+                >
+                    User
+                </span>
+
+                <i class="fa-solid fa-chevron-down"></i>
+
+            </button>
+
+
+            <div
+                class="user-dropdown"
+                id="userDropdown"
+            >
+
+                <div class="user-dropdown-header">
+
+                    <strong id="dropdownUserName">
+                        User
+                    </strong>
+
+                    <span id="dropdownUserId">
+                        USER01
+                    </span>
+
+                </div>
+
+
+                <a
+                    href="profile.html"
+                    class="user-dropdown-item"
+                >
+
+                    <i class="fa-solid fa-user"></i>
+
+                    My Profile
+
+                </a>
+
+
+                <a
+                    href="history.html"
+                    class="user-dropdown-item"
+                >
+
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+
+                    Settlement History
+
+                </a>
+                <a
+    href="dashboard.html#how-it-works"
+    class="user-dropdown-item"
+>
+
+    <i class="fa-solid fa-circle-question"></i>
+
+    How It Works
+
+</a>
+
+
+                <button
+                    class="user-dropdown-item logout-item"
+                    id="logoutButton"
+                >
+
+                    <i class="fa-solid fa-right-from-bracket"></i>
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<main class="history-page">
+
+
+    <section class="history-heading">
+
+        <span class="section-tag">
+            YOUR HISTORY
+        </span>
+
+        <h1>
+            Settlement History
+        </h1>
+
+        <p>
+            Groups that have already been settled.
+        </p>
+
+    </section>
+
+
+    <section
+        id="historyList"
+        class="history-list"
+    ></section>
+
+
+</main>
+
+
+<script src="js/storage.js"></script>
+<script src="js/history.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
