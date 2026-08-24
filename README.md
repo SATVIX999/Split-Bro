@@ -16,6 +16,59 @@ Split Bro is a web-based application designed to simplify shared expense managem
 - 🎯 Unique Group Codes for Joining Groups
 - 👤 User Profile Management
 
+
+                         ┌──────────────────┐
+   .                     │   START / HOME   │
+                         └────────┬─────────┘
+                                  │
+                                  ▼
+                        ┌───────────────────┐
+                        │ User Logged In?   │
+                        └───────┬─────┬─────┘
+                                │     │
+                           No   │     │ Yes
+                                │     │
+                    ▼           │     ▼
+             ┌────────────┐     │  ┌───────────────┐
+             │ Login /    │─────┘  │   Dashboard   │
+             │ Sign Up    │        └───────┬───────┘
+             └─────┬──────┘                │
+                   │                       ▼
+                   └────────────────►┌───────────────┐
+                                     │ Create / Join │
+                                     │     Group     │
+                                     └───────┬───────┘
+                                             │
+                                             ▼
+                                     ┌───────────────┐
+                                     │ Add Members & │
+                                     │   Expenses    │
+                                     └───────┬───────┘
+                                             │
+                                             ▼
+                                     ┌───────────────┐
+                                     │ Calculate     │
+                                     │ Balances      │
+                                     └───────┬───────┘
+                                             │
+                                             ▼
+                                     ┌───────────────┐
+                                     │ Smart         │
+                                     │ Settlement    │
+                                     │ Suggestions   │
+                                     └───────┬───────┘
+                                             │
+                                             ▼
+                                     ┌───────────────┐
+                                     │ View History  │
+                                     │ & Insights    │
+                                     └───────┬───────┘
+                                             │
+                                             ▼
+                                     ┌───────────────┐
+                                     │   SETTLED ✓   │
+                                     └───────────────┘
+
 ## 🛠️ Technology Stack
 - HTML5
 - CSS3
