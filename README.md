@@ -17,57 +17,40 @@ Split Bro is a web-based application designed to simplify shared expense managem
 - 👤 User Profile Management
 
 
-                         ┌──────────────────┐
-   .                     │   START / HOME   │
-                         └────────┬─────────┘
-                                  │
-                                  ▼
-                        ┌───────────────────┐
-                        │ User Logged In?   │
-                        └───────┬─────┬─────┘
-                                │     │
-                           No   │     │ Yes
-                                │     │
-                    ▼           │     ▼
-             ┌────────────┐     │  ┌───────────────┐
-             │ Login /    │─────┘  │   Dashboard   │
-             │ Sign Up    │        └───────┬───────┘
-             └─────┬──────┘                │
-                   │                       ▼
-                   └────────────────►┌───────────────┐
-                                     │ Create / Join │
-                                     │     Group     │
-                                     └───────┬───────┘
-                                             │
-                                             ▼
-                                     ┌───────────────┐
-                                     │ Add Members & │
-                                     │   Expenses    │
-                                     └───────┬───────┘
-                                             │
-                                             ▼
-                                     ┌───────────────┐
-                                     │ Calculate     │
-                                     │ Balances      │
-                                     └───────┬───────┘
-                                             │
-                                             ▼
-                                     ┌───────────────┐
-                                     │ Smart         │
-                                     │ Settlement    │
-                                     │ Suggestions   │
-                                     └───────┬───────┘
-                                             │
-                                             ▼
-                                     ┌───────────────┐
-                                     │ View History  │
-                                     │ & Insights    │
-                                     └───────┬───────┘
-                                             │
-                                             ▼
-                                     ┌───────────────┐
-                                     │   SETTLED ✓   │
-                                     └───────────────┘
+   ## 🔄 Application Flow
+
+```text
+START / HOME
+     │
+     ▼
+Is User Logged In?
+     │
+ ┌───┴───┐
+ No      Yes
+ │        │
+ ▼        ▼
+Login /   Dashboard
+Sign Up      │
+ │           │
+ └─────┬─────┘
+       ▼
+Create / Join Group
+       │
+       ▼
+Add Members & Expenses
+       │
+       ▼
+Calculate Balances
+       │
+       ▼
+Smart Settlement
+       │
+       ▼
+View History & Insights
+       │
+       ▼
+      END ✓
+```
 
 ## 🛠️ Technology Stack
 - HTML5
