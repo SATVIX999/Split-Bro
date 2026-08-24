@@ -277,6 +277,6 @@ document.querySelectorAll(".protected-group-link").forEach(function (link) {
             window.location.href = "groups.html";
         } else {
             window.location.href = "login.html";
-        }
-    });
+        }  
+    }) ;
 });
